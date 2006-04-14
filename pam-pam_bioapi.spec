@@ -18,6 +18,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides a PAM-compliant interface to use in biometrically
 authenticating local users.
 
+%description -l pl
+Ten pakiet udostêpnia zgody z PAM-em interfejs do biometrycznego
+uwierzytelniania u¿ytkowników lokalnych.
+
 %prep
 %setup -q -n %{modulename}-%{version}
 
@@ -33,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/bioapi/pam/
+install -d $RPM_BUILD_ROOT%{_sysconfdir}/bioapi/pam
 
 %clean
 rm -rf $RPM_BUILD_ROOT
