@@ -1,6 +1,6 @@
 %define 	modulename pam_bioapi
 Summary:	PAM BioAPI module
-Summary(pl):	Modu³ PAM BioAPI
+Summary(pl.UTF-8):   ModuÅ‚ PAM BioAPI
 Name:		pam-%{modulename}
 Version:	0.2.1
 Release:	0.1
@@ -18,9 +18,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides a PAM-compliant interface to use in biometrically
 authenticating local users.
 
-%description -l pl
-Ten pakiet udostêpnia zgody z PAM-em interfejs do biometrycznego
-uwierzytelniania u¿ytkowników lokalnych.
+%description -l pl.UTF-8
+Ten pakiet udostÄ™pnia zgody z PAM-em interfejs do biometrycznego
+uwierzytelniania uÅ¼ytkownikÃ³w lokalnych.
 
 %prep
 %setup -q -n %{modulename}-%{version}
