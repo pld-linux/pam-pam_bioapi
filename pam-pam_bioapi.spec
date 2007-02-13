@@ -1,6 +1,6 @@
 %define 	modulename pam_bioapi
 Summary:	PAM BioAPI module
-Summary(pl.UTF-8):   Moduł PAM BioAPI
+Summary(pl.UTF-8):	Moduł PAM BioAPI
 Name:		pam-%{modulename}
 Version:	0.2.1
 Release:	0.1
