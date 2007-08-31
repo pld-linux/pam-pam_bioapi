@@ -2,13 +2,13 @@
 Summary:	PAM BioAPI module
 Summary(pl.UTF-8):	Moduł PAM BioAPI
 Name:		pam-%{modulename}
-Version:	0.2.1
+Version:	0.4.0
 Release:	0.1
 Epoch:		0
 License:	GPL v2
 Group:		Applications/System
-Source0:	http://www.qrivy.net/~michael/blua/pam_bioapi/%{modulename}-%{version}.tar.bz2
-# Source0-md5:	7101c49d5774e892f0eda401b4c1f634
+Source0:	http://pam-bioapi.googlecode.com/files/%{modulename}-%{version}.tar.gz
+# Source0-md5:	0896c6549be3720d358b1e8507c36a4d
 URL:		http://www.qrivy.net/~michael/blua/
 BuildRequires:	bioapi-devel
 BuildRequires:	pam-devel
