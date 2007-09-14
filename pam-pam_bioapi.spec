@@ -10,8 +10,10 @@ Group:		Applications/System
 Source0:	http://pam-bioapi.googlecode.com/files/%{modulename}-%{version}.tar.gz
 # Source0-md5:	0896c6549be3720d358b1e8507c36a4d
 URL:		http://www.qrivy.net/~michael/blua/
+Requires:   sqlite3
 BuildRequires:	bioapi-devel
 BuildRequires:	pam-devel
+BuildRequires:  sqlite3-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,7 +29,11 @@ uwierzytelniania użytkowników lokalnych.
 
 %build
 CPPFLAGS="-I%{_includedir}/bioapi"
+# 1. We need to set prefix to empty string to have proper config files generated.
+# 2. libdir is set to /lib to allow pam to find modules in /lib/security.
+#    However, this package requires sqlite3, which is located under /usr.
 %configure \
+    --prefix='' \
 	--libdir=/%{_lib}
 %{__make}
 
