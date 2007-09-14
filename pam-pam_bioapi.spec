@@ -3,7 +3,7 @@ Summary:	PAM BioAPI module
 Summary(pl.UTF-8):	Moduł PAM BioAPI
 Name:		pam-%{modulename}
 Version:	0.4.0
-Release:	0.1
+Release:	0.2
 Epoch:		0
 License:	GPL v2
 Group:		Applications/System
@@ -46,6 +46,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README NEWS
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_sbindir}/*
 %attr(755,root,root) /%{_lib}/security/pam*.so*
+%attr(755,root,root) /%{_lib}/libbirdb*.so*
 %dir %{_sysconfdir}/bioapi
-%dir %{_sysconfdir}/bioapi/pam
+%{_sysconfdir}/bioapi/*
+%{_sysconfdir}/pam.d/*
+%{_mandir}/man8/*
